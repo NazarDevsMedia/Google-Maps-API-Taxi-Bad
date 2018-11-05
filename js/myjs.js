@@ -5,8 +5,8 @@ $(window).on('beforeunload', function(){
 
 let map;
 function initMap() {
-let wien = new google.maps.LatLng(48.214827, 16.382295);
-let map = new google.maps.Map(document.getElementById('map'), {
+const wien = new google.maps.LatLng(48.214827, 16.382295);
+map = new google.maps.Map(document.getElementById('map'), {
           zoom: 13,
           center: wien,
           mapTypeId: google.maps.MapTypeId.ROADMAP
@@ -134,7 +134,7 @@ let map = new google.maps.Map(document.getElementById('map'), {
 
 }
 
-      function handleLocationError(browserHasGeolocation, marker, pos) {
+      function handleLocationError(browserHasGeolocation, pos) {
         infoWindow.setPosition(pos);
         infoWindow.setContent(browserHasGeolocation ?
                               'Error: The Geolocation service failed.' :
